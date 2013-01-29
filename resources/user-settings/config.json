@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"userId": {
+			"name": "userId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "userId",
+			"order": 0
+		},
+		"key": {
+			"name": "key",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "key",
+			"order": 1
+		},
+		"value": {
+			"name": "value",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "value",
+			"order": 2
+		},
+		"appId": {
+			"name": "appId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "appId",
+			"order": 3
+		}
+	}
+}

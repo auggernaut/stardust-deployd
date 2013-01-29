@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"thanker": {
+			"name": "thanker",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "thanker",
+			"order": 0
+		},
+		"thankee": {
+			"name": "thankee",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "thankee",
+			"order": 1
+		},
+		"reason": {
+			"name": "reason",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "reason",
+			"order": 2
+		},
+		"tags": {
+			"name": "tags",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "tags",
+			"order": 3
+		}
+	}
+}

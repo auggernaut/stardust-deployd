@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="/dpd.js"></script>
+</head>
+<body>
+
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+    <!--[if lt IE 9]>
+            <script src="scripts/vendor/es5-shim.min.js"></script>
+            <script src="scripts/vendor/json3.min.js"></script>
+        <![endif]-->
+
+    <div class="container">
+        <div class="hero-unit">
+            <h1>StarDust</h1>
+            <p>Be the Cloud.</p>
+            <div class="row">
+                <div class="span6 ">
+                    <h2>Login</h2>
+                    <p>Your digital self awaits...</p>
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <input class="span2" placeholder="Username" id="username" size="16" type="text">
+                            <span id="message" class="help-inline"></span>
+                        </div>
+                        <div class="control-group">
+                            <input class="span2" placeholder="Password" id="password" size="16" type="password">
+                        </div>
+
+                        <button class="btn btn-primary">Login</button>
+                    </form>
+
+                    <script>
+                        //
+                        // When a user clicks login...
+                        //
+                        $('button').click(function (e) {
+
+                            e.preventDefault();
+
+                            //
+                            // Create the credentials from the input text.
+                            //
+                            var credentials = {
+                                username: $('#username').val(),
+                                password: $('#password').val()
+                            };
+
+                            dpd.users.login(credentials, function (session) {
+
+                                if (session) {
+                                    if (session.uid) {
+                                        dpd.users.put(session.uid, { visited: new Date() }, function () {
+                                            window.location = '/User/App';
+                                        })
+                                    }
+                                }
+                                else {
+                                    $('#message').text('Invalid username/password!');
+                                }
+                            })
+                        });
+
+                        //
+                        // Also, send when the user presses enter.
+                        //
+                        $('input').keypress(function (e) {
+                            if (e.keyCode === 13) {
+                                e.preventDefault();
+                                $('button').click();
+                                return false;
+                            }
+                        });
+                  </script>
+                </div>
+                <div class="span4">
+                    <h2>Want to join us?</h2>
+                    <p>We're a small community of technologists who are building our own cloud, controlling our data, and getting paid.</p>
+
+                    <a class="btn" href="register.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+        (function (d, t) {
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s)
+        }(document, 'script'));
+        </script>
+</body>
+</html>

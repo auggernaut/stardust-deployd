@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title></title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="main.css"/>
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="/dpd.js"></script>
+    </head>
+    <body>
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        
+        <!--[if lt IE 9]>
+            <script src="scripts/vendor/es5-shim.min.js"></script>
+            <script src="scripts/vendor/json3.min.js"></script>
+        <![endif]-->
+
+      <div class="container">
+        <div class="hero-unit">
+          <h1>Be the Cloud.</h1>
+          <p></p>
+          <div class="row">
+            <div class="span8">
+              
+                <p>StarDust is a personal web application platform. Whether you're a user, developer, community leader, entreprenuer, or oliphaunt, you can run a StarDust.</p>
+                <p>Before StarDust you only ever installed apps locally and the cloud components were somewhere else. </p>
+                
+                <p>With StarDust you have complete control over apps. This means you control your data.</p>
+                
+              <h3>Flexible</h3>
+              <p>StarDust is the framework around which other services and applications are built. Services can do things like pull your data out of social networks. Applications could use that data (and perhaps other types of data, e.g. your credit card transactions) to craft a more personal social experience.</p>
+              <h3>Secure</h3>
+              <p>StarDust is a server that you or your community control. This means that your data likely won't be used in some way you're uncomfortable with.</p>
+              <p>StarDust is designed from the ground up to support Content Addressible Data and Link Contacts. This means that each piece of data you store in StarDust can be used by other services and applications, but only if given explicit permission by you.</p>
+              <h3>Open</h3>
+              <p>StarDust is completely open source (MIT). No one can own or control the development of the core StarDust platform. Anyone can improve it.</p>
+              <h3>Portable</h3>
+              <p>If you setup your very own StarDust, it's yours. Don't have the technical chops to do that? Join a community. Don't like what that community wants to do with your data? Find another or pay for someone to setup your very own StarDust for you.</p>
+              <p>Every time you move to another StarDust, you take your data, applications, and services with you. When you move to a new home you don't leave all your furniture behind. Why should digital homes be any different?</p>
+              <h2>How does it work?</h2>
+               <p>Decoupled service-based architecture</p>
+               <p>Content addressable data</p>
+               <p>Access Control and Link Contracts</p>
+               <p>Rules engine</p>
+               <p>Event management</p>
+               <p>Multi-tenancy</p>
+              
+              <h2></h2>
+            </div>
+            <div class="span2">
+              <h2>Join us!</h2>
+              <form class="form-horizontal">
+                <div class="control-group">
+                    <input id="username" class="span2" placeholder="Username" type="text" size="16"/>
+                </div>
+                <div class="control-group">
+                    <input id="password" class="span2" type="password" placeholder="Password" size="16"/>
+                </div>
+                <div class="control-group">
+                    <input id="name" class="span2" placeholder="Display Name" type="text" size="16"/>
+                </div>
+              </form>
+              <button id="register" class="btn-primary btn">Sign Up</button>
+                
+              <script>
+                $('#register').click(function() {
+                    var data = {
+                        username: $('#username').val(),
+                        password: $('#password').val(),
+                        name: $('#name').val()
+                    };
+                    
+                    dpd.users.post(data, function () {                  
+                      window.location = '/chumify/app/';
+                    })
+                })
+              </script>
+            </div>
+          </div>
+        </div>            
+      </div>
+      
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

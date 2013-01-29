@@ -1,0 +1,24 @@
+<div class="hero-unit">
+  <h1>Chumify!</h1>
+  <p>Get to know your chums.</p>
+
+	<ul>
+      <li ng-repeat="game in games">{{game.title}}</li>
+  </ul>
+
+  <!-- Adds the Filepicker.io javascript library to the page -->
+				<script src="https://api.filepicker.io/v1/filepicker.js"></script>
+				<script type="text/javascript">
+				    //Seting up Filepicker.io with your api key
+				    filepicker.setKey('AZOJbZxbYRdWn1Mr4lV6Hz');
+				</script>
+
+				//Use a drag drop widget
+				<input type="filepicker-dragdrop"/>
+
+				//Or how about a save widget
+				<button data-fp-mimetype="image/png"
+				  data-fp-url="http://www.filepicker.io/static/img/success.png">
+				     Save File</button>
+	</p>
+</div>

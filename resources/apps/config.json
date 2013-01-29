@@ -1,0 +1,53 @@
+{
+	"type": "Collection",
+	"properties": {
+		"appName": {
+			"name": "appName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "appName",
+			"order": 0
+		},
+		"appDesc": {
+			"name": "appDesc",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "appDesc",
+			"order": 1
+		},
+		"appDir": {
+			"name": "appDir",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "appDir",
+			"order": 2
+		},
+		"appDate": {
+			"name": "appDate",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "appDate",
+			"order": 3
+		},
+		"appRepoUrl": {
+			"name": "appRepoUrl",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "appRepoUrl",
+			"order": 4
+		},
+		"appCreator": {
+			"name": "appCreator",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "appCreator",
+			"order": 5
+		}
+	}
+}
