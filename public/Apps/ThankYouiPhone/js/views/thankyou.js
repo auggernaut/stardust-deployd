@@ -17,9 +17,18 @@ window.HomeView = Backbone.View.extend({
     },
 
     logout: function () {
-        dpd.users.logout(function (result, error) {
-            window.location.replace("/index.html");
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:2403/users/logout',
+            success: function (data) {
+                window.location.replace("/index.html");
+            }
         });
+
+        //dpd.users.logout(function (result, error) {
+        //    window.location.replace("/index.html");
+        //});
     }
 
 });
