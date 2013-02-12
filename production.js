@@ -3,14 +3,14 @@ var deployd = require('deployd');
 
 var server = deployd({
     port: process.env.PORT || 5000,
-    env: 'production',
+    env: 'staging',
     db: {
-        host: 'my.production.mongo.host',
-        port: 27105,
-        name: 'my-db',
+        host: 'ds031627.mongolab.com',
+        port: 31627,
+        name: 'heroku_app11837569',
         credentials: {
-            username: 'username',
-            password: 'password'
+            username: process.env.MONGODB_USERNAME,
+            password: process.env.MONGODB_PASSWORD
         }
     }
 });
