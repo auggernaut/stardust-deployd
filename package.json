@@ -1,13 +1,13 @@
 ﻿{
-  "name": "stardust",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "2.5.x"
+    "name": "stardust",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+      "express": "~2.5.8",
+      "deployd": "~0.7.1"
   },
   "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x",
-	"deployd": "0.6.10",
-	"mongo": "0.1.0"
+    "node": ">= 0.8.0",
+	"npm": "1.1.x"
   }
 }
