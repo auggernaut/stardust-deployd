@@ -9,13 +9,30 @@
 			"id": "type",
 			"order": 0
 		},
-		"displayName": {
+        "displayName": {
 			"name": "displayName",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
 			"id": "displayName",
 			"order": 1
+		},
+        "email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "email",
+			"order": 2
+		},
+		
+		"photo": {
+			"name": "photo",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "photo",
+			"order": 3
 		}
 	}
 }
